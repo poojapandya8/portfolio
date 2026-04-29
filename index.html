@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pooja Pandya - UX/UI Designer</title>
-    <meta name="description" content="UX/UI Designer experienced in B2B and B2C products, turning user needs into business outcomes.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Pooja Pandya — UX/UI Designer</title>
+    <meta name="description" content="UX/UI Designer turning user needs into business outcomes across healthcare, logistics, e-commerce, and restaurant domains.">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -20,7 +21,7 @@
                 <a href="about.html" class="nav-link">About</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -28,80 +29,103 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Introduction -->
+    <section class="intro" data-reveal="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm Pooja!</h1>
-                <p class="hero-subtitle">UX/UI Designer 👩🏻‍💻 experienced in B2B and B2C products, turning user needs into business outcomes.</p>
-                <p class="hero-tagline"><strong>Healthcare-rooted empathy ｜ Pixel-perfect interfaces ｜ Result-driven designs</strong></p>
+            <p class="intro-label" data-reveal="hero">UX/UI Designer</p>
+            <h1 class="intro-heading" data-reveal="hero">I design interfaces<br>where <em>empathy</em> meets<br>precision.</h1>
+            <p class="intro-focus" data-reveal="hero">Turning complex problems into clear, measurable outcomes — across healthcare, logistics, and e-commerce.</p>
+        </div>
+    </section>
+
+    <!-- Selected Work -->
+    <section class="work">
+        <div class="container">
+            <h2 class="work-label" data-reveal>Selected Work</h2>
+
+            <div class="work-list">
+                <!-- Project 1: Trapezoid Technology -->
+                <a href="project-trapezoid.html" class="project" data-reveal>
+                    <span class="project-index">01</span>
+                    <div class="project-text">
+                        <span class="project-type">B2B SaaS · Logistics</span>
+                        <h3 class="project-name">Trapezoid Technology</h3>
+                        <p class="project-desc">Dashboard redesign for trucking industry professionals — rethinking data visualization and daily workflows to reduce friction in fleet management.</p>
+                    </div>
+                    <div class="project-outcome">
+                        <span class="outcome-number">20%</span>
+                        <span class="outcome-label">increase in platform adoption</span>
+                    </div>
+                </a>
+
+                <!-- Project 2: Korion Health -->
+                <a href="project-korion.html" class="project" data-reveal>
+                    <span class="project-index">02</span>
+                    <div class="project-text">
+                        <span class="project-type">B2B/B2C · Healthcare</span>
+                        <h3 class="project-name">Korion Health</h3>
+                        <p class="project-desc">Revamping web app workflows and landing page for a healthcare platform — improving accessibility and usability for patients and providers alike.</p>
+                    </div>
+                    <div class="project-outcome">
+                        <span class="outcome-number">&nearr;</span>
+                        <span class="outcome-label">improved accessibility &amp; usability</span>
+                    </div>
+                </a>
+
+                <!-- Project 3: RP's Kitchen -->
+                <a href="project-rps.html" class="project" data-reveal>
+                    <span class="project-index">03</span>
+                    <div class="project-text">
+                        <span class="project-type">B2C · Restaurant</span>
+                        <h3 class="project-name">RP's Kitchen</h3>
+                        <p class="project-desc">Strengthening brand identity and enhancing user engagement through a refreshed digital experience for a growing restaurant brand.</p>
+                    </div>
+                    <div class="project-outcome">
+                        <span class="outcome-number">&nearr;</span>
+                        <span class="outcome-label">brand identity &amp; engagement</span>
+                    </div>
+                </a>
+
+                <!-- Project 4: Superjweler -->
+                <a href="project-superjweler.html" class="project" data-reveal>
+                    <span class="project-index">04</span>
+                    <div class="project-text">
+                        <span class="project-type">B2C · E-commerce</span>
+                        <h3 class="project-name">Superjweler</h3>
+                        <p class="project-desc">Designing a refined e-commerce experience for fine jewelry — where trust, elegance, and ease of purchase are inseparable.</p>
+                    </div>
+                    <div class="project-outcome">
+                        <span class="outcome-number">&nearr;</span>
+                        <span class="outcome-label">conversion &amp; trust signals</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects">
+    <!-- Approach -->
+    <section class="approach" data-reveal>
         <div class="container">
-            <div class="projects-grid">
-                <!-- Project 1: Trapezoid Technology -->
-                <article class="project-card">
-                    <div class="project-image project-placeholder" data-project="trapezoid">
-                        <div class="placeholder-content">
-                            <div class="placeholder-icon">📊</div>
-                            <div class="placeholder-text">Dashboard Design</div>
-                        </div>
+            <div class="approach-inner">
+                <div class="approach-content">
+                    <h2 class="approach-heading">How I work</h2>
+                    <p class="approach-text">I start with the people who use the product, not the pixels. Research and empathy come first — then structure, then craft. Every decision traces back to a real need, and every outcome gets measured.</p>
+                    <a href="about.html" class="approach-link">More about my process</a>
+                </div>
+                <div class="approach-values">
+                    <div class="value">
+                        <span class="value-label">Start with</span>
+                        <span class="value-word">Research</span>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Trapezoid Technology</h3>
-                        <p class="project-description">B2B SaaS logistics platform dashboard redesign focusing on data visualization and user experience improvements for trucking industry professionals.</p>
-                        <a href="project-trapezoid.html" class="project-link">View Case Study</a>
+                    <div class="value">
+                        <span class="value-label">Then</span>
+                        <span class="value-word">Structure</span>
                     </div>
-                </article>
-
-                <!-- Project 2: Korion Health -->
-                <article class="project-card">
-                    <div class="project-image project-placeholder" data-project="korion">
-                        <div class="placeholder-content">
-                            <div class="placeholder-icon">🏥</div>
-                            <div class="placeholder-text">Healthcare Platform</div>
-                        </div>
+                    <div class="value">
+                        <span class="value-label">Then</span>
+                        <span class="value-word">Craft</span>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Korion Health</h3>
-                        <p class="project-description">B2B/B2C healthcare platform — Revamping web app workflows and landing page, improving accessibility and overall usability</p>
-                        <a href="project-korion.html" class="project-link">View Case Study</a>
-                    </div>
-                </article>
-
-                <!-- Project 3: RP's Kitchen -->
-                <article class="project-card">
-                    <div class="project-image project-placeholder" data-project="rps">
-                        <div class="placeholder-content">
-                            <div class="placeholder-icon">🍽️</div>
-                            <div class="placeholder-text">Restaurant Brand</div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">RP'S Kitchen</h3>
-                        <p class="project-description">B2C restaurant — Strengthening brand identity and enhancing user engagement through a refreshed digital experience</p>
-                        <a href="project-rps.html" class="project-link">View Case Study</a>
-                    </div>
-                </article>
-
-                <!-- Project 4: Superjweler -->
-                <article class="project-card">
-                    <div class="project-image project-placeholder" data-project="superjweler">
-                        <div class="placeholder-content">
-                            <div class="placeholder-icon">💎</div>
-                            <div class="placeholder-text">E-commerce Platform</div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Superjweler</h3>
-                        <p class="project-description">A B2C e-commerce platform for fine jewelry</p>
-                        <a href="project-superjweler.html" class="project-link">View Case Study</a>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>
@@ -110,10 +134,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Pooja Pandya. All rights reserved.</p>
+                <p>&copy; <span class="js-year">2024</span> Pooja Pandya</p>
                 <div class="footer-links">
                     <a href="mailto:contact@poojapandya.com" class="footer-link">Email</a>
-                    <a href="https://linkedin.com/in/poojapandya" class="footer-link" target="_blank">LinkedIn</a>
+                    <a href="https://linkedin.com/in/poojapandya" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
             </div>
         </div>

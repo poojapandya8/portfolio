@@ -1,0 +1,473 @@
+/* ==========================================================
+   Homepage — Pooja Pandya Portfolio
+   Aesthetic: Elegant drama. Confident editorial.
+   Fonts: Bricolage Grotesque (display) + Libre Caslon Text (body)
+   ========================================================== */
+
+/* ==========================================================
+   Introduction — THE hero moment. Dramatic scale.
+   ========================================================== */
+
+.intro {
+    padding-top: calc(var(--nav-height) + clamp(80px, 12vh, 140px));
+    padding-bottom: clamp(80px, 14vh, 160px);
+    min-height: clamp(480px, 75vh, 800px);
+    display: flex;
+    align-items: flex-end;
+}
+
+.intro .container {
+    width: 100%;
+}
+
+.intro-label {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-xl);
+}
+
+.intro-heading {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-size: clamp(2.5rem, 5.5vw + 0.5rem, 4.75rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    margin-bottom: var(--space-2xl);
+    max-width: 14ch;
+}
+
+.intro-heading em {
+    font-style: italic;
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-weight: 400;
+    color: var(--color-accent);
+}
+
+.intro-focus {
+    font-size: clamp(0.9375rem, 1vw + 0.25rem, 1.0625rem);
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    max-width: 44ch;
+}
+
+/* ==========================================================
+   Selected Work — structured list with numbered entries
+   ========================================================== */
+
+.work {
+    padding-top: var(--space-2xl);
+    padding-bottom: clamp(80px, 10vh, 140px);
+}
+
+.work-label {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-3xl);
+}
+
+.work-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Project entry --- */
+
+.project {
+    display: grid;
+    grid-template-columns: 48px 1fr auto;
+    gap: var(--space-lg);
+    align-items: baseline;
+    padding: var(--space-2xl) 0;
+    border-top: 1px solid var(--color-border);
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 350ms var(--ease-out-quart);
+}
+
+.project:last-child {
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Index number — the structural element that adds rhythm */
+.project-index {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--color-text-tertiary);
+    letter-spacing: 0.02em;
+    padding-top: 2px;
+    font-variant-numeric: tabular-nums;
+    transition: color 350ms var(--ease-out-quart);
+}
+
+/* Hover: the whole row responds */
+.project:hover .project-name {
+    color: var(--color-accent);
+}
+
+.project:hover .outcome-number {
+    color: var(--color-accent);
+}
+
+.project:hover .project-index {
+    color: var(--color-accent);
+}
+
+/* When ANY project is hovered, dim all others (only after revealed) */
+.work-list:hover .project.revealed {
+    opacity: 0.35;
+}
+.work-list:hover .project.revealed:hover {
+    opacity: 1;
+}
+
+.project-text {
+    min-width: 0;
+}
+
+.project-type {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.project-name {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-size: clamp(1.5rem, 2.5vw + 0.25rem, 2.25rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin-bottom: var(--space-sm);
+    transition: color 350ms var(--ease-out-quart);
+}
+
+.project-desc {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    max-width: 48ch;
+}
+
+/* --- Outcome metric --- */
+
+.project-outcome {
+    text-align: right;
+    padding-top: 2px;
+    flex-shrink: 0;
+    min-width: 130px;
+}
+
+.outcome-number {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 200;
+    line-height: 1;
+    color: var(--color-text);
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+    transition: color 350ms var(--ease-out-quart);
+}
+
+.outcome-label {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    color: var(--color-text-tertiary);
+    display: block;
+    max-width: 150px;
+    margin-left: auto;
+}
+
+/* ==========================================================
+   Approach — two-column with large typographic values
+   ========================================================== */
+
+.approach {
+    padding: clamp(80px, 10vh, 140px) 0;
+    background: var(--color-accent-light);
+}
+
+.approach-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: start;
+}
+
+.approach-content {
+    max-width: 440px;
+}
+
+.approach-heading {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-lg);
+}
+
+.approach-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-xl);
+}
+
+.approach-link {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    transition: color var(--transition-fast);
+}
+
+.approach-link::after {
+    content: '\2192';
+    display: inline-block;
+    transition: transform var(--transition-fast);
+}
+
+.approach-link:hover {
+    color: var(--color-accent-hover);
+}
+
+.approach-link:hover::after {
+    transform: translateX(5px);
+}
+
+/* Process values — large typography as visual texture */
+.approach-values {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    padding-top: var(--space-xs);
+}
+
+.value {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.value-label {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+}
+
+.value-word {
+    font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+    font-size: clamp(2rem, 3.5vw, 3.25rem);
+    font-weight: 200;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--color-accent);
+}
+
+/* ==========================================================
+   Scroll reveal — entrance choreography
+   ========================================================== */
+
+/* Hero elements: staggered rise */
+[data-reveal="hero"] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 800ms var(--ease-out-expo),
+                transform 800ms var(--ease-out-expo);
+}
+
+.intro-label[data-reveal="hero"] { transition-delay: 100ms; }
+.intro-heading[data-reveal="hero"] { transition-delay: 250ms; }
+.intro-focus[data-reveal="hero"] { transition-delay: 420ms; }
+
+/* The section wrapper itself should not move */
+section.intro[data-reveal="hero"] {
+    transform: none;
+    opacity: 1;
+}
+
+[data-reveal="hero"].revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Standard reveals for non-hero elements */
+[data-reveal]:not([data-reveal="hero"]) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 600ms var(--ease-out-quart),
+                transform 600ms var(--ease-out-quart);
+}
+
+[data-reveal]:not([data-reveal="hero"]).revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger project entries */
+.project[data-reveal]:nth-child(1) { transition-delay: 0ms; }
+.project[data-reveal]:nth-child(2) { transition-delay: 100ms; }
+.project[data-reveal]:nth-child(3) { transition-delay: 200ms; }
+.project[data-reveal]:nth-child(4) { transition-delay: 300ms; }
+
+/* ==========================================================
+   Focus states — keyboard accessibility
+   ========================================================== */
+
+.project:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 8px;
+    border-radius: 2px;
+    opacity: 1 !important;
+}
+
+.project:focus-visible .project-name {
+    color: var(--color-accent);
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 900px) {
+    .approach-inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .approach-values {
+        flex-direction: row;
+        gap: var(--space-2xl);
+    }
+
+    .value-word {
+        font-size: clamp(1.5rem, 4vw, 2.25rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        min-height: auto;
+        padding-top: calc(var(--nav-height) + var(--space-3xl));
+        padding-bottom: var(--space-3xl);
+        align-items: flex-start;
+    }
+
+    .intro-heading {
+        font-size: clamp(2rem, 7vw + 0.25rem, 3rem);
+        max-width: none;
+    }
+
+    .intro-heading br {
+        display: none;
+    }
+
+    .project {
+        grid-template-columns: 32px 1fr;
+        gap: var(--space-md);
+        padding: var(--space-xl) 0;
+    }
+
+    .project-outcome {
+        grid-column: 2;
+        text-align: left;
+        display: flex;
+        align-items: baseline;
+        gap: var(--space-sm);
+    }
+
+    .outcome-number {
+        font-size: 1.5rem;
+    }
+
+    .outcome-label {
+        margin-left: 0;
+        max-width: none;
+    }
+
+    .work {
+        padding-top: var(--space-lg);
+        padding-bottom: var(--space-3xl);
+    }
+
+    .approach {
+        padding: var(--space-3xl) 0;
+    }
+
+    .approach-values {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    /* Disable dim-on-hover on narrow screens */
+    .work-list:hover .project.revealed {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro {
+        padding-top: calc(var(--nav-height) + var(--space-2xl));
+        padding-bottom: var(--space-2xl);
+    }
+
+    .intro-heading {
+        font-size: clamp(1.75rem, 8vw, 2.5rem);
+    }
+
+    .project {
+        grid-template-columns: 1fr;
+        padding: var(--space-lg) 0;
+    }
+
+    .project-index {
+        display: none;
+    }
+
+    .project-desc {
+        font-size: 0.875rem;
+    }
+
+    .approach {
+        padding: var(--space-2xl) 0;
+    }
+
+    .value-word {
+        font-size: 1.75rem;
+    }
+}
+
+/* Disable dim-on-hover for touch devices */
+@media (hover: none) {
+    .work-list:hover .project.revealed {
+        opacity: 1;
+    }
+}
